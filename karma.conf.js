@@ -27,17 +27,18 @@ module.exports = function (config) {
       dir: require('path').join(__dirname, './coverage/frontend-msvc-parking'),
       subdir: '.',
       reporters: [
-        { type: 'html' },
+        { type: 'html', subdir: 'html' },
+        { type: 'lcov', subdir: 'report-lcov' },
         { type: 'text-summary' }
       ]
     },
     reporters: ['progress', 'kjhtml'],
     browsers: ['Chrome'],
+    singleRun: false,
     restartOnFileChange: true,
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    singleRun: false,
   });
 };

@@ -1,0 +1,8 @@
+{
+  "/parking": {
+    "target": "https://regres.in", //https:app-parking.azurewebsites.net
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}
